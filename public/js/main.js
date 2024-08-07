@@ -23,15 +23,11 @@ function displayResults(data) {
 }
 
 function displayError(error) {
-    const resultsDiv = document.getElementBYId('results');
+    const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
         <h2>Erro:</h2>
         <pre>${error}</pre>
     `;
 }
 
-document.getElementById('fetchEventButton').addEventListener('click', fetchEvent());
-
-
-
-fetchEvent();
+document.getElementById('fetchEventButton').addEventListener('click', fetchEvent);
